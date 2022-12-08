@@ -1,0 +1,15 @@
+jupyter notebook
+import os
+os.getcwd()
+ls
+from AFQ.api.participant import ParticipantAFQ
+
+output_directory = "./tract"
+
+myafq = ParticipantAFQ(
+    "sub-0001_dwi.nii.gz",
+    "sub-0001_dwi.bval",
+    "sub-0001_dwi.bvec",
+    output_dir = output_directory)
+    
+myafq.export_all()
